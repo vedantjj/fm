@@ -6,6 +6,71 @@
     <title>Formula Racing</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #ddd;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            width: 80%;
+            max-width: 400px;
+        }
+        .timeline-item:nth-child(odd) {
+            align-self: flex-start;
+        }
+        .timeline-item:nth-child(even) {
+            align-self: flex-end;
+        }
+        .timeline-item h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .timeline-item p {
+            margin: 10px 0 0;
+            color: #555;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #0078d7;
+            border: 4px solid #f9f9f9;
+            border-radius: 50%;
+            top: 10px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .timeline-item:hover {
+            background: #0078d7;
+            color: #fff;
+        }
+        .timeline-item:hover p {
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,6 +81,7 @@
             <a href="#sponsors">Sponsors</a>
             <a href="#cars">Cars</a>
             <a href="#media">Media</a>
+            <a href="#timeline">Timeline</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -66,6 +132,28 @@
         </div>
     </section>
 
+    <section id="timeline" class="timeline">
+        <h2>Our Journey</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <h3>2007</h3>
+                <p>Formula Manipal was founded.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2010</h3>
+                <p>First international event participation in Italy.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2015</h3>
+                <p>Developed our first electric race car.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2023</h3>
+                <p>Marked 17 years of innovation and excellence.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <h2>Get in Touch!</h2>
         <p>Vibhas Srivastava<br>Team Manager<br>Formula Manipal<br>Phone: +91 - 8460730945<br>Email: formulamanipal@manipal.edu</p>
@@ -85,3 +173,4 @@
     </section>
 </body>
 </html>
+
